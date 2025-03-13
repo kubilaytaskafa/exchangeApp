@@ -33,9 +33,39 @@ const Currency = () => {
           onChange={(e) => setFromCurrency(e.target.value)}
           className="rounded-lg shadow-sm p-2 outline-none lg:hover:scale-105 transition duration-300"
         >
-          <option>USD</option>
+          <option>AUD</option>
+          <option>BGN</option>
+          <option>BRL</option>
+          <option>CAD</option>
+          <option>CHF</option>
+          <option>CNY</option>
+          <option>CZK</option>
+          <option>DKK</option>
           <option>EUR</option>
+          <option>GBP</option>
+          <option>HDK</option>
+          <option>HRK</option>
+          <option>HUF</option>
+          <option>IDR</option>
+          <option>ILS</option>
+          <option>INR</option>
+          <option>ISK</option>
+          <option>JPY</option>
+          <option>KRW</option>
+          <option>MXN</option>
+          <option>MYR</option>
+          <option>NOK</option>
+          <option>NZD</option>
+          <option>PHP</option>
+          <option>PLN</option>
+          <option>RON</option>
+          <option>RUB</option>
+          <option>SEK</option>
+          <option>SGD</option>
+          <option>THB</option>
           <option>TRY</option>
+          <option>USD</option>
+          <option>ZAR</option>
         </select>
         <div>
           <FaMoneyBillTransfer className="text-4xl font-bold text-center text-white" />
@@ -44,9 +74,39 @@ const Currency = () => {
           onChange={(e) => setToCurrency(e.target.value)}
           className="rounded-lg shadow-sm p-2 outline-none lg:hover:scale-105 transition duration-300"
         >
+          <option>AUD</option>
+          <option>BGN</option>
+          <option>BRL</option>
+          <option>CAD</option>
+          <option>CHF</option>
+          <option>CNY</option>
+          <option>CZK</option>
+          <option>DKK</option>
+          <option>EUR</option>
+          <option>GBP</option>
+          <option>HDK</option>
+          <option>HRK</option>
+          <option>HUF</option>
+          <option>IDR</option>
+          <option>ILS</option>
+          <option>INR</option>
+          <option>ISK</option>
+          <option>JPY</option>
+          <option>KRW</option>
+          <option>MXN</option>
+          <option>MYR</option>
+          <option>NOK</option>
+          <option>NZD</option>
+          <option>PHP</option>
+          <option>PLN</option>
+          <option>RON</option>
+          <option>RUB</option>
+          <option>SEK</option>
+          <option>SGD</option>
+          <option>THB</option>
           <option>TRY</option>
           <option>USD</option>
-          <option>EUR</option>
+          <option>ZAR</option>
         </select>
         <input
           type="number"
