@@ -3,11 +3,16 @@ import React, { useState } from "react";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
 const Currency = () => {
   const [amount, setAmount] = useState(1);
-  const [fromCurrency, setFromCurrency] = useState("USD");
-  const [toCurrency, setToCurrency] = useState("TRY");
+  const [fromCurrency, setFromCurrency] = useState("");
+  const [toCurrency, setToCurrency] = useState("");
   const [result, setResult] = useState(0);
   const BASE_URL = "https://api.freecurrencyapi.com/v1/latest";
   const API_KEY = "fca_live_dNiKiYlcJPjDfqS5RH50rOPLAC9Aj3ORkDFwUlxU";
+
+  const changeCurrency = () => {
+    setFromCurrency(toCurrency);
+    setToCurrency(fromCurrency);
+  };
 
   const exchangeRate = async () => {
     const response = await axios.get(
@@ -32,6 +37,7 @@ const Currency = () => {
         <select
           onChange={(e) => setFromCurrency(e.target.value)}
           className="rounded-lg shadow-sm p-2 outline-none lg:hover:scale-105 transition duration-300"
+          value={fromCurrency}
         >
           <option>AUD</option>
           <option>BGN</option>
@@ -68,11 +74,15 @@ const Currency = () => {
           <option>ZAR</option>
         </select>
         <div>
-          <FaMoneyBillTransfer className="text-4xl font-bold text-center text-white" />
+          <FaMoneyBillTransfer
+            className="text-4xl font-bold text-center text-white"
+            onClick={changeCurrency}
+          />
         </div>
         <select
           onChange={(e) => setToCurrency(e.target.value)}
           className="rounded-lg shadow-sm p-2 outline-none lg:hover:scale-105 transition duration-300"
+          value={toCurrency}
         >
           <option>AUD</option>
           <option>BGN</option>
